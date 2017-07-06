@@ -1,0 +1,13 @@
+<div class="form-group">
+	<div class="col-sm-6">
+		FirstName : <input type="text" class="form-control" [(ngModel)]="FirstName" #fName><br>
+		LastName : <input type="text" class="form-control" [(ngModel)]="Lastname" #lName><br>
+		<button type="button" class="btn btn-default" (click)="showTitle(fName.value,lName.value)">Submit</button>
+	</div>
+</div>
+
+<!--div that displays the title-->
+<div *ngIf="submitted">
+	The title is : {{title}}
+</div>
+
